@@ -5,12 +5,19 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    nodes: [],
+    edges: [],
+    name: ''
   },
   mutations: {
-
-  },
-  actions: {
-
+    setNodes (state, nodes) {
+      state.nodes = nodes
+    },
+    setEdges (state, edges) {
+      state.edges = edges
+    },
+    setName (state, name) {
+      state.name = name
+    }
   }
 })

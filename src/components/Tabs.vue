@@ -29,6 +29,9 @@ export default {
     selectTab (info) {
       const { tab, index } = info
       this.selected = index
+      this.filterTabContent(tab)
+    },
+    filterTabContent (tab) {
       this.tabs.forEach(t => {
         t.selected = t.name === tab.name
       })
@@ -37,6 +40,9 @@ export default {
   created () {
     this.tabs = this.$children
     this.selected = this.active
+  },
+  mounted () {
+    this.filterTabContent(this.tabs[this.selected])
   },
   filters: {
     titleCase (str) {

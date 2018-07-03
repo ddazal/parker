@@ -25,6 +25,13 @@ body {
   width: 100%;
 }
 
+input {
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 5px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
 #app {
   min-height: 100%;
 }

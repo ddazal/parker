@@ -84,11 +84,7 @@ export default {
 }
 
 .search input {
-  border-radius: 2px;
-  border: none;
-  box-shadow: 0 0 5px;
   display: block;
-  font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
   padding: 15px 10px;
   transition: box-shadow .25s;

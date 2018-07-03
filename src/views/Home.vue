@@ -39,15 +39,17 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setNodes', 'setEdges']),
+    ...mapMutations(['setNodes', 'setEdges', 'setName']),
     select () {
       this.$refs.search.select()
     },
     async getData () {
       this.loading = true
       const spreadsheet = await fetchSpreadsheet(this.key)
+      const { googleSheetName } = spreadsheet
       const nodes = spreadsheet.sheets('nodes').all()
       const edges = spreadsheet.sheets('edges').all()
+      this.setName(googleSheetName)
       this.setNodes(nodes)
       this.setEdges(edges)
       this.loading = false

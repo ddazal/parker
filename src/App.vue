@@ -28,7 +28,6 @@ body {
 input {
   border-radius: 2px;
   border: none;
-  box-shadow: 0 0 5px;
   font-family: 'Fira Sans', sans-serif;
 }
 

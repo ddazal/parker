@@ -5,16 +5,18 @@ import store from './store'
 import 'vue-loaders/dist/vue-loaders.css'
 import { BallClipRotateLoader } from 'vue-loaders'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShareAlt, faCog } from '@fortawesome/free-solid-svg-icons'
+import { faShareAlt, faCog, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import ToggleButton from 'vue-js-toggle-button'
 
-library.add(faShareAlt, faCog)
+library.add(faShareAlt, faCog, faCheck)
 
+Vue.use(ToggleButton)
 Vue.component(BallClipRotateLoader.name, BallClipRotateLoader)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
-Vue.prototype.$network = undefined
+window.$network = undefined
 
 new Vue({
   router,

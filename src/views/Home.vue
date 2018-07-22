@@ -81,18 +81,17 @@ export default {
   margin: 25px auto;
   position: relative;
   width: 90%;
-}
-
-.search input {
-  display: block;
-  font-size: 16px;
-  padding: 15px 10px;
-  transition: box-shadow .25s;
-  width: 100%;
-}
-
-.search input:focus {
-  box-shadow: 0 0 8px;
+  & input {
+    box-shadow: 0 0 5px;
+    display: block;
+    font-size: 16px;
+    padding: 15px 10px;
+    transition: box-shadow .25s;
+    width: 100%;
+    &:focus {
+      box-shadow: 0 0 8px;
+    }
+  }
 }
 
 .spinner {

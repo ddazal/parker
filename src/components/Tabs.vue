@@ -76,27 +76,23 @@ export default {
   background: white;
   border-top: 2px solid transparent;
   transition: all .25s;
-}
-
-.tab a {
-  color: #2c3e50;
-  cursor: pointer;
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  transition: all .25s;
-}
-
-.tab:hover {
-  background: #f0f0f0;
-}
-
-.tab.is-active {
-  background: #f0f0f0;
-  border-top-color: #2c3e50;
-}
-
-.tab.is-active a {
-  cursor: not-allowed;
+  &:hover {
+    background: #f0f0f0;
+  }
+  &.is-active {
+    background: #f0f0f0;
+    border-top-color: #2c3e50;
+    & a {
+      cursor: not-allowed;
+    }
+  }
+  a {
+    color: #2c3e50;
+    cursor: pointer;
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: all .25s;
+  }
 }
 </style>

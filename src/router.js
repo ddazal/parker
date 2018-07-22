@@ -6,6 +6,7 @@ import Network from './views/Network.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
